@@ -97,7 +97,7 @@ html_theme = 'percona-theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {
+# html_theme_options = {
 #  'base_url': 'http://bashtage.github.io/sphinx-material/',
 #  'repo_url': 'https://github.com/percona/percona-toolkit',
 #  'repo_name': 'percona/percona-toolkit',
@@ -106,7 +106,7 @@ html_theme = 'percona-theme'
 #  'google_analytics_account': 'UA-343802-3',
 #  'globaltoc_collapse': True,
 #  'version_dropdown': True
-#}
+# }
 
 html_context = {
    'edit_uri': 'edit/3.x/source'
