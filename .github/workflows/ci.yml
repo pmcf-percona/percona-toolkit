@@ -30,7 +30,7 @@ jobs:
 
     - name: Build Sphinx Documentation
       run: |
-        cd docs # Change to the directory containing your Sphinx conf.py
+        cd docs/config/sphinx-build
         sphinx-build -b html . _build/html
 
     - name: Upload artifacts
