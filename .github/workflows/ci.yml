@@ -1,6 +1,8 @@
 name: ci
 
-on: push
+on:
+    push:
+        branches: [ "3.x" ]
 
 jobs:
   build:
@@ -9,6 +11,10 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v4
+    - name: Configure Git Credentials
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
@@ -18,7 +24,7 @@ jobs:
         path: docs/build/html/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/3.x'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docs/build/html
