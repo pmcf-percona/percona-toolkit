@@ -30,7 +30,7 @@ jobs:
 
     - name: Build Sphinx Documentation
       run: |
-        cd docs/config/sphinx-build
+        cd config/sphinx-build
         sphinx-build -b html . _build/html
 
     - name: Upload artifacts
